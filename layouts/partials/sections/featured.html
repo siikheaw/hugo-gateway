@@ -1,0 +1,28 @@
+<section class="section section--featured">
+  <div class="container">
+
+    <div class="section__header">
+      <h2 class="section__title">{{ with .Site.Params.featured.title }}{{ . | markdownify }}{{ end }}</h2>
+      <h3 class="section__subtitle">{{ with .Site.Params.featured.subtitle }}{{ . | markdownify }}{{ end }}</h3>
+    </div><!-- /.section__header -->
+
+    <div class="section__body">
+      <div class="l-grid">
+        {{ range .Site.Params.featured.row }}
+          {{ range .list }}
+          <div class="l-col">
+            <div class="media-stack">
+              <a class="media-stack__items img--medium" href="{{ .url }}">
+                <img class="media-stack__img" src="{{ .Site.BaseURL }}/img/{{ .imgSource }}" alt=""  />
+              </a>
+              <h5 class="media-stack__title">{{ .title | markdownify }}</h5>
+            </div>
+
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+</section><!-- /.section -->

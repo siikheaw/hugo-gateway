@@ -1,0 +1,13 @@
+<div class="meta post__meta">
+  <span class="meta__date post__date">{{ dateFormat .Site.Params.DateForm .Date }}</span>
+  {{ if isset .Params "categories" }}
+  <span class="meta__cat post__cat">
+    {{ range .Params.categories }}
+    <a class="meta__cat__url" href="/categories/{{ urlize . }}" >{{ title . }}</a>
+    {{ end }}
+  </span>
+  {{ end }}
+  {{ if isset .Params "author" }}
+  <span class="meta__author">{{ .Params.author }}</span>
+  {{ end }}
+</div>

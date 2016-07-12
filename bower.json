@@ -1,0 +1,21 @@
+{
+  "name": "alliance",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Worapon K"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sanitize-css": "^4.1.0",
+    "offside": "^1.3.1"
+  }
+}

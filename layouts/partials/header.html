@@ -1,0 +1,25 @@
+{{ partial "head.html" . }}
+
+<header id="global-header">
+  <div class="global-header__inner">
+    <div class="container">
+
+      <div class="l-col">
+        <div id="branding">
+          <a href="{{ .Site.BaseURL }}" class="branding__logo">{{ .Site.Title }}</a>
+        </div>
+      </div>
+
+      <div class="l-col">
+        <a href="#" id="offside-btn" class="icon icon--hamburger h--right">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+      </div>
+
+    </div><!-- /.container -->
+  </div>
+</header><!-- /#global-header -->
+
+<main id="main">

@@ -1,0 +1,107 @@
+# Site variables
+# https://gohugo.io/templates/variables/#site-variables
+baseurl = "http://localhost:1313"
+# baseurl = ""
+
+title = "Hugo Gateway"
+
+# canonifyurls = true
+copyright = "Code released under the Apache 2.0 license."
+languageCode = "en-us"
+lastChange = ""
+paginate = 10
+theme = "hugo-gateway"
+
+[author]
+  name = "Worapon K"
+
+[params]
+  Description = "Simple responsive Hugo theme"
+  Subtitle = "A Responsive Hugo Theme"
+
+  DateForm = "Mon, Jan 2, 2006"
+  DisqusShortname = ""
+
+  Author = "Worapon K"
+  Email = "mail@sample.com"
+  Ganalytics = "XX-00000000-0"
+
+  Summary = true  # takes true or false
+  Content = true  # takes true or false
+  # if both are set to true, summary is shown.
+  # FooterMsg = "Copyright 2016. G.A.M. Legal Alliance."
+
+  # Intro section
+  [params.intro]
+    enable = true
+    title = "Make the Web Fun Again"
+    subtitle = "Introducing Hugo, a new idea around making website creation simple again. "
+
+    [[params.intro.row]]
+      [[params.intro.row.list]]
+          title = "Open and Free"
+          description = "Hugo is open source and completely free. Source at github."
+
+      [[params.intro.row.list]]
+          title = "Built with Love"
+          description = "Hugo is designed to work well for any kind of website."
+
+  # About section
+  [params.about]
+    enable = true
+    title = "About Hugo"
+    subtitle = "A Fast & Modern Static Website Engine"
+    description = "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, easy use and configurability."
+
+  # Featured section
+  [params.featured]
+    enable = true
+    title = "Featured"
+    subtitle = "What Make Hugo Different"
+    description = ""
+
+    [[params.featured.row]]
+      [[params.featured.row.list]]
+          icon = "fa-shopping-cart"
+          imgSource = "back-1.jpg"
+          title = "Run Anywhere"
+          description = "Hugo is quite possibly the easiest to install software you’ve ever used, simply download and run."
+
+      [[params.featured.row.list]]
+          icon = "fa-laptop"
+          imgSource = "back-2.jpg"
+          title = "Fast & Powerful"
+          description = "Hugo is written for speed and performance."
+
+      [[params.featured.row.list]]
+        icon = "fa-lock"
+        imgSource = "back-5.jpg"
+        title = "Flexible"
+        description = "Hugo is designed to work how you do. Organize your content however you want with any URL structure."
+
+# # Social
+[[params.social]]
+  title = "twitter"
+  url = "https://twitter.com/username"
+[[params.social]]
+  title = "github"
+  url = "https://github.com/username"
+
+# Primary navigation
+[[menu.primary]]
+  name = "Blog"
+  weight = 10
+  identifier = ""
+  url = "/post"
+# [[menu.main]]
+#     name = "Post"
+#     # pre = "<i class='fa fa-heart'></i>"
+#     weight = -130
+#     identifier = ""
+#     url = "/post"
+# [[menu.main]]
+#     name = "Menu 2"
+#     # pre = "<i class='fa fa-heart'></i>"
+#     weight = -120
+#     identifier = ""
+#     url = "/"

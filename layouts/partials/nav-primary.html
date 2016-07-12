@@ -1,0 +1,7 @@
+<nav class="primary-nav" role="navigation">
+  <ul class="menu">
+    {{ range .Site.Menus.primary }}
+    <li class="menu__items"><a class="menu__url" href="{{ .URL }}">{{ .Name }}</a></li>
+    {{end}}
+  </ul>
+</nav><!-- /.primary-nav -->

@@ -1,0 +1,19 @@
+<section class="section section--about">
+  <div class="container">
+
+    <div class="l-grid">
+      <div class="l-col">
+        <div class="section__header">
+          <h2 class="section__title">{{ with .Site.Params.about.title }}{{ . | markdownify }}{{ end }}</h2>
+          <h3 class="section__subtitle">{{ with .Site.Params.about.subtitle }}{{ . | markdownify }}{{ end }}</h3>
+        </div>
+      </div>
+      <div class="l-col">
+        <div class="section__body">
+          <p class="section__paragraph">{{ with .Site.Params.about.description }}{{ . | markdownify }}{{ end }}</p>
+        </div>
+      </div>
+    </div><!-- /.l-grid -->
+
+  </div><!-- /.container -->
+</section><!-- /.section -->

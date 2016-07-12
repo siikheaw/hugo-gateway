@@ -1,0 +1,47 @@
+{{ if ne .Site.Params.share false}}
+<div class="sharer">
+  <div class="container">
+
+    <a class="sharer sharer-facebook"
+    href="https://facebook.com/sharer.php?u={{ .Permalink }}" rel="nofollow" target="_blank" title="Share on Facebook">
+      <span class="fa-stack fa-md">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+    <a class="sharer sharer-twitter"
+    href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" rel="nofollow" target="_blank" title="Share on Twitter">
+      <span class="fa-stack fa-md">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+    <a class="sharer sharer-googleplus"
+    href="https://plus.google.com/share?url={{ .Permalink }}" rel="nofollow" target="_blank" title="Share on Google+">
+      <span class="fa-stack fa-md">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+
+    <!-- *** -->
+    <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text={{ .Title | safeHTML}}&amp;url={{ .Permalink }}"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url={{ .Permalink }}{{ if .Params.pinterestmedia }}&amp;media={{ .Site.BaseURL }}{{ .Params.pinterestmedia }}{{ end }}&amp;description={{ .Title | safeHTML}}"
+        onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+        <span class="hidden">Pinterest</span>
+    </a>
+    <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url={{ .Permalink }}"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+
+  </div><!-- /.container -->
+</div><!-- /.sharer -->
+{{ end }}

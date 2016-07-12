@@ -1,0 +1,48 @@
+{{ partial "header.html" . }}
+
+<section class="content">
+
+    <article class="post">
+
+      <!-- Post header & Meta -->
+      <header class="post__header">
+        <div class="container">
+          <h1 class="post__title">{{ .Title }}</h1>
+          {{ partial "meta.html" . }}
+        </div>
+      </header>
+
+      <!-- Post body -->
+      <div class="post__body">
+        <div class="container">
+          {{ if isset .Params "image" }}
+          <div class="featured-image post__featured-image">
+            <img src="{{ .Site.BaseURL }}/img/{{ .Params.image }}" />
+          </div>
+          {{ end }}
+          {{ .Content }}
+        </div>
+      </div>
+
+      <footer class="post__footer">
+        <nav class="pagination">
+          <div class="container">
+            {{ if .Prev }}
+            <a class="btn btn--previous pagination__url" href="{{ .Prev.Permalink }}"> Prev</a>
+            {{ end }}
+            {{ if .Next }}
+            <a class="btn btn--next pagination__url" href="{{ .Next.Permalink }}"> Next</a>
+            {{ end }}
+          </div>
+        </nav><!-- /.pagination -->
+      </footer>
+
+    </article><!-- /.post -->
+
+
+
+</section><!-- /.content -->
+
+<!--{{ partial "sharer.html" . }}-->
+
+{{ partial "footer.html" . }}

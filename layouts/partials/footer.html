@@ -1,0 +1,33 @@
+  </main><!-- /#main -->
+
+  <footer id="global-footer">
+    <div class="container">
+
+      <div class="footer-info">
+        <h6 class="footer-info__title"><a class="footer-info__url" href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">{{ .Site.Title }}</a></h6>
+        
+        <!-- Social -->
+        <div class="footer__social">
+        {{ range .Site.Params.social }}
+          <span class="fa-stack fa-md">
+            <a href="{{ .url }}" title="{{ .title }}" class="footer-info__url">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-{{ .title }} fa-stack-1x fa-inverse"></i>
+            </a>
+          </span>
+        {{ end }}
+        </div>
+
+        <div class="footer-info__copyright">
+          <small class="footer-info__author">By {{ .Site.Params.Author }}</small><br />
+          <small class="footer-info__copyright-text"><i class="fa fa-copyright"></i> {{ .Site.Copyright }}</small>
+        </div>
+        
+      </div><!-- /.footer-info -->
+
+    </div><!-- /.container -->
+  </footer><!-- /#globalFooter -->
+
+</div><!-- /#site-container -->
+
+{{ partial "js.html" . }}

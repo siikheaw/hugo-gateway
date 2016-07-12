@@ -1,0 +1,20 @@
+
+<!-- JS -->
+<script src="{{ .Site.BaseURL }}/js/hugo-gateway.js"></script>
+<script src="{{ .Site.BaseURL }}/bower_components/offside/dist/offside.min.js"></script>
+
+<script>
+
+  //Offside.js minimal setup
+  var myOffside = offside( '#offside-menu', {
+    slidingElementsSelector:'#site-container',
+    buttonsSelector: '#offside-btn, .offside-btn--close',
+  });
+
+  var overlay = document.querySelector('.site-overlay').addEventListener( 'click', window.offside.factory.closeOpenOffside );
+</script>
+
+{{ with .Site.Params.AnalyticsID }}{{ partial "analytics.html" . }}{{ end }}
+
+</body>
+</html>

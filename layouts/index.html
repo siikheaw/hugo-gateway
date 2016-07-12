@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+<!-- Hero -->
+{{ partial "hero.html" . }}
+
+<!-- Intro -->
+{{ if .Site.Params.intro.enable }}
+  {{ partial "sections/intro.html" . }}
+{{ end }}
+
+<!-- Featured -->
+{{ if .Site.Params.featured.enable }}
+  {{ partial "sections/featured.html" . }}
+{{ end }}
+
+<!-- About -->
+{{ if .Site.Params.about.enable }}
+  {{ partial "sections/about.html" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}

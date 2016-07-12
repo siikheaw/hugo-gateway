@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+<section class="content">
+
+    <article class="post">
+      <!-- Post header & Meta -->
+      <header class="post__header">
+        <div class="container">
+          <h1 class="post__title">{{ .Title }}</h1>
+          {{ partial "meta.html" . }}
+        </div>
+      </header>
+
+      <!-- Post body -->
+      <div class="post__body">
+        <div class="container">
+          {{ if isset .Params "image" }}
+          <div class="featured-image post__featured-image">
+            <img src="{{ .Site.BaseURL }}/img/{{ .Params.image }}" />
+          </div>
+          {{ end }}
+          {{ .Content }}
+        </div>
+      </div>
+    </article><!-- /.post -->
+
+</section><!-- /.content -->
+
+<!--{{ partial "sharer.html" . }}-->
+
+{{ partial "footer.html" . }}

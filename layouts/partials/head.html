@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Site.Params.Description }}">
+  <meta name="author" content="{{ .Site.Params.Author }}">
+  {{ .Hugo.Generator }}
+
+  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+
+  {{ if .RSSlink }}
+  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
+
+  {{ "<!-- Stylesheets -->" | safeHTML }}
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700,900' rel='stylesheet'>
+  <!-- Font Awesome CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link href="{{ .Site.BaseURL }}/css/app.css" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="{{ if .IsHome }}body--front l--front{{ end }}{{ if .IsPage }}body--post l--post{{ end }}">
+
+  <!-- Offset elements -->
+  <nav id="offside-menu">
+    <!-- Cross btn icon -->
+    <a href="#" class="offside-btn--close icon icon--cross h--right">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+
+    <!-- Primary navigation -->
+    {{ partial "nav-primary.html" . }}
+  </nav>
+
+  <!-- Site overlay -->
+  <div class="site-overlay"></div>
+
+  <!-- Content container -->
+  <div id="site-container">
